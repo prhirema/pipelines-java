@@ -1,8 +1,15 @@
 # Starter pipeline
+- task: MyCustomTask@0
+  inputs:
+    serverEndpoint: 'DevOps Deploy Remote Connection'
+    udComponentId: 'REGULAR-COMP'
+    udComponentVersionName: '$(Build.BuildNumber)'
+    linkName: 'azureDemoLink'
+    link: 'azureDemoLinkValue'
+    fileToUpload: '$(System.DefaultWorkingDirectory)'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-
 trigger:
 - main
 
